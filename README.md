@@ -7,31 +7,35 @@ Model A focuses on traditional ML classifiers with different feature extraction 
 ---
 
 ## 📁 Project Structure
-AMLS_25_26_SNxxxxxx
+AMLS_25-26_BreastMNIST/
 │
-├── Code
-│ ├── Model_A
-│ │ ├── svm_model.py # Baseline: Flatten + SVM
-│ │ ├── pca_svm.py # PCA dimensionality reduction + SVM
-│ │ ├── hog_svm.py # HOG feature extraction + SVM
-│ │
-│ ├── Model_B
-│ │ ├── cnn_model.py # CNN baseline + capacity + augmentation
+├── Code/
+│   ├── Model_A/
+│   │   ├── svm_model.py      # Baseline: Flatten + SVM
+│   │   ├── pca_svm.py        # PCA dimensionality reduction + SVM
+│   │   └── hog_svm.py        # HOG feature extraction + SVM
+│   │
+│   └── Model_B/
+│       └── cnn_model.py      # CNN baseline + capacity + augmentation
 │
-├── Datasets # (Optional - MedMNIST auto downloaded)
+├── Results/                  # All experiment outputs saved for reporting
+│   ├── modelA_baseline.txt
+│   ├── modelA_pca.txt
+│   ├── modelA_capacity.txt
+│   ├── modelA_hog.txt
+│   ├── modelB_baseline.txt
+│   ├── modelB_capacity.txt
+│   └── modelB_augment.txt
 │
-├── Results # All experiment outputs are saved for report and reproducibility.
-│ ├── modelA_baseline.txt
-│ ├── modelA_pca.txt
-│ ├── modelA_capacity.txt
-│ ├── modelA_hog.txt
-│ ├── modelB_baseline.txt
-│ ├── modelB_capacity.txt
-│ ├── modelB_augment.txt
+├── Datasets/                 # Left empty
 │
-├── main.py # Main script to run all experiments
-├── README.md
-└── requirements.txt # Dependencies
+├── main.py                   # Main script to run all experiments
+├── requirements.txt          # Dependencies (locked versions)
+└── README.md                 # Documentation
+
+The project is organized into modular components, separating classical machine-learning models (Model A: SVM + PCA + HOG) and deep-learning methods (Model B: CNN with capacity tuning and data augmentation), with all experimental outputs stored in the Results directory for reproducibility.
+
+The Datasets directory is intentionally left empty in the submitted package as required by the coursework specification. The BreastMNIST dataset is automatically downloaded during execution through the MedMNIST API.
 
 ---
 
@@ -87,4 +91,17 @@ Source: https://medmnist.com/
 ---
 
 ## 👤 Author
-This project was created as part of AMLS 25/26 coursework.
+This project was developed as part of the AMLS 25/26 coursework.
+(Anonymous submission — University policy prohibits naming.)
+
+---
+
+## Version History
+- v1.0 — Initial release  
+  - Implemented Model A (SVM-based) and Model B (CNN-based)
+
+- v1.1 — Fixes & improvements  
+  - Fixed missing `Datasets` directory required for submission  
+  - Corrected Project Structure diagram in README.md
+
+---
