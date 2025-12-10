@@ -1,0 +1,17 @@
+Config: epochs = 5
+accuracy: 0.7692
+precision: 0.7671
+recall: 0.9825
+f1: 0.8615
+
+Config: epochs = 10
+accuracy: 0.8333
+precision: 0.8235
+recall: 0.9825
+f1: 0.8960
+
+Config: epochs = 15
+accuracy: 0.8526
+precision: 0.8699
+recall: 0.9386
+f1: 0.9030

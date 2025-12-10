@@ -1,0 +1,26 @@
+###############################################################################
+# AMLS 2025/26 – BreastMNIST Classification
+# Locked dependency versions selected based on the exact runtime environment
+# used during the experiment to support full reproducibility of results.
+#
+# Model A:
+#   - SVM (baseline, PCA + SVM, capacity)
+#   - HOG feature extraction implemented via scikit-image
+#
+# Model B:
+#   - Convolutional Neural Networks (baseline, capacity scaling, augmentation)
+#
+# Note:
+# Only core libraries required for training and evaluation are included to avoid
+# dependency bloat and ensure reproducibility across systems.
+###############################################################################
+
+torch==2.9.1
+torchvision==0.24.1
+medmnist==3.0.2
+numpy==2.3.5
+pandas==2.3.3
+scikit-learn==1.7.2
+scikit-image==0.25.2
+pillow==12.0.0
+matplotlib==3.8.2

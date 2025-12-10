@@ -1,0 +1,32 @@
+# --- Python Cache ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- VSCode ---
+.vscode/
+.history/
+
+# --- Jupyter / Reports ---
+.ipynb_checkpoints/
+*.pdf
+*.docx
+
+# --- Virtual Environments ---
+env/
+venv/
+AMLS/
+
+# --- PyTorch Cache ---
+*.pt
+*.pth
+
+# --- Logs ---
+*.log
+
+# --- Temporary ---
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db

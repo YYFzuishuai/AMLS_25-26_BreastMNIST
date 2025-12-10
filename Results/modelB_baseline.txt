@@ -1,0 +1,11 @@
+Model B (CNN baseline) results on BreastMNIST:
+
+accuracy: 0.7628
+precision: 0.7655
+recall: 0.9737
+f1: 0.8571
+
+epochs = 5
+batch_size = 64
+lr = 1e-3
+architecture = SimpleCNN(2 conv blocks + 1 FC hidden layer)
