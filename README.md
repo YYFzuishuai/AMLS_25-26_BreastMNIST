@@ -7,31 +7,35 @@ Model A focuses on traditional ML classifiers with different feature extraction 
 ---
 
 ## 📁 Project Structure
+
+```text
 AMLS_25-26_BreastMNIST/
-│
 ├── Code/
 │   ├── Model_A/
-│   │   ├── svm_model.py      # Baseline: Flatten + SVM
-│   │   ├── pca_svm.py        # PCA dimensionality reduction + SVM
-│   │   └── hog_svm.py        # HOG feature extraction + SVM
+│   │   ├── svm_model.py          # Baseline: flatten + SVM
+│   │   ├── pca_svm.py            # PCA + SVM (dimensionality reduction)
+│   │   └── hog_svm.py            # HOG feature extraction + SVM
 │   │
 │   └── Model_B/
-│       └── cnn_model.py      # CNN baseline + capacity + augmentation
+│       └── cnn_model.py          # CNN baseline + capacity + augmentation
 │
-├── Results/                  # All experiment outputs saved for reporting
-│   ├── modelA_baseline.txt
-│   ├── modelA_pca.txt
-│   ├── modelA_capacity.txt
-│   ├── modelA_hog.txt
-│   ├── modelB_baseline.txt
-│   ├── modelB_capacity.txt
-│   └── modelB_augment.txt
+├── Datasets/                     # Left empty in submission
+│   └── README.md                 # Explains that data is auto-downloaded
 │
-├── Datasets/                 # Left empty
+├── Results/                      # All experiment outputs saved for reporting
+│   ├── modelA_baseline.txt       # Model A: flatten + SVM
+│   ├── modelA_pca.txt            # Model A: PCA + SVM
+│   ├── modelA_capacity.txt       # Model A: capacity experiment
+│   ├── modelA_hog.txt            # Model A: HOG + SVM
+│   ├── modelB_baseline.txt       # Model B: CNN baseline
+│   ├── modelB_capacity.txt       # Model B: CNN capacity experiment
+│   └── modelB_augment.txt        # Model B: CNN with data augmentation
 │
-├── main.py                   # Main script to run all experiments
-├── requirements.txt          # Dependencies (locked versions)
-└── README.md                 # Documentation
+├── main.py                       # Main script to run all experiments
+├── requirements.txt              # Dependencies (locked versions)
+├── README.md                     # Documentation (this file)
+└── .gitignore                    # Git ignore rules
+```
 
 The project is organized into modular components, separating classical machine-learning models (Model A: SVM + PCA + HOG) and deep-learning methods (Model B: CNN with capacity tuning and data augmentation), with all experimental outputs stored in the Results directory for reproducibility.
 
@@ -103,5 +107,8 @@ This project was developed as part of the AMLS 25/26 coursework.
 - v1.1 — Fixes & improvements  
   - Fixed missing `Datasets` directory required for submission  
   - Corrected Project Structure diagram in README.md
+
+- v1.1.5 — Improvements    
+  - Corrected Project Structure diagram in README.md again
 
 ---
