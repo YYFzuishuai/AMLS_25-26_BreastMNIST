@@ -1,8 +1,0 @@
-Baseline Model A (Flatten + SVM)
-Train: 546 samples
-Test: 156 samples
-
-accuracy: 0.7949
-precision: 0.7847
-recall: 0.9912
-f1: 0.8760

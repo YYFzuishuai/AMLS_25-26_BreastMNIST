@@ -10,7 +10,7 @@ Model A focuses on traditional ML classifiers with different feature extraction 
 
 ```text
 AMLS_25-26_BreastMNIST/
-├── Code/
+├── Code/                         # All model implementations
 │   ├── Model_A/
 │   │   ├── svm_model.py          # Baseline: flatten + SVM
 │   │   ├── pca_svm.py            # PCA + SVM (dimensionality reduction)
@@ -22,22 +22,13 @@ AMLS_25-26_BreastMNIST/
 ├── Datasets/                     # Left empty in submission
 │   └── README.md                 # Explains that data is auto-downloaded
 │
-├── Results/                      # All experiment outputs saved for reporting
-│   ├── modelA_baseline.txt       # Model A: flatten + SVM
-│   ├── modelA_pca.txt            # Model A: PCA + SVM
-│   ├── modelA_capacity.txt       # Model A: capacity experiment
-│   ├── modelA_hog.txt            # Model A: HOG + SVM
-│   ├── modelB_baseline.txt       # Model B: CNN baseline
-│   ├── modelB_capacity.txt       # Model B: CNN capacity experiment
-│   └── modelB_augment.txt        # Model B: CNN with data augmentation
-│
 ├── main.py                       # Main script to run all experiments
 ├── requirements.txt              # Dependencies (locked versions)
 ├── README.md                     # Documentation (this file)
 └── .gitignore                    # Git ignore rules
 ```
 
-The project is organized into modular components, separating classical machine-learning models (Model A: SVM + PCA + HOG) and deep-learning methods (Model B: CNN with capacity tuning and data augmentation), with all experimental outputs stored in the Results directory for reproducibility.
+The project is organized into modular components, separating classical machine-learning models (Model A: SVM + PCA + HOG) and deep-learning methods (Model B: CNN with capacity tuning and data augmentation).
 
 The Datasets directory is intentionally left empty in the submitted package as required by the coursework specification. The BreastMNIST dataset is automatically downloaded during execution through the MedMNIST API.
 
@@ -53,7 +44,7 @@ The Datasets directory is intentionally left empty in the submitted package as r
 | Model A - Capacity | Hyperparameters (C, gamma) |
 | Model B - Baseline CNN | Simple ConvNet |
 | Model B - Capacity | More epochs |
-| Model B - Data Aug | Rotation, Flip, Shift |
+| Model B - Data Aug | Rotation, Horizontal Flip |
 
 ---
 
@@ -77,11 +68,9 @@ torch==2.9.1
 torchvision==0.24.1
 medmnist==3.0.2
 numpy==2.3.5
-pandas==2.3.3
 scikit-learn==1.7.2
 scikit-image==0.25.2
 pillow==12.0.0
-matplotlib==3.8.2
 ```
 
 ---
@@ -110,5 +99,10 @@ This project was developed as part of the AMLS 25/26 coursework.
 
 - v1.1.5 — Improvements    
   - Corrected Project Structure diagram in README.md again
+
+- v1.2 — Final update    
+  - Removed unnecessary packages (e.g., pandas, matplotlib) from both requirements.txt and README to ensure a clean and minimal dependency set
+  - Removed the unused Results directory from the project structure description in README to avoid confusion, as experiment outputs are generated during runtime and not required for submission
+  - Added comprehensive English documentation and inline comments across all existing code files for improved readability and clarity
 
 ---
